@@ -161,10 +161,32 @@ class GameScreen:
         self.game_state.redo()
     
     def handle_save(self):
-        self.game_state.save_game()
+        import datetime
+        timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+        filename = f"quoridor_save_{timestamp}.json"
+        self.game_state.save_game(filename)
     
     def handle_load(self):
-        self.game_state.load_game()
+        try:
+            from tkinter import Tk, filedialog
+            root = Tk()
+            root.withdraw()  # Hide the root window
+            root.attributes('-topmost', True)  # Bring dialog to front
+            
+            filename = filedialog.askopenfilename(
+                title="Load Game",
+                initialdir="saves",
+                filetypes=[("JSON files", "*.json"), ("All files", "*.*")]
+            )
+            
+            root.destroy()
+            
+            if filename:
+                self.game_state.load_game(filename)
+            else:
+                self.game_state.message = "Load cancelled"
+        except Exception as e:
+            self.game_state.message = f"Error loading: {str(e)}"
     
     def handle_menu(self):
         self.return_to_menu = True

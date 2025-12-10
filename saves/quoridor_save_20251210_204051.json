@@ -1,0 +1,342 @@
+{
+    "mode": "human_vs_ai",
+    "ai_difficulty": "easy",
+    "current_player_idx": 0,
+    "winner": null,
+    "players": [
+        {
+            "player_id": 0,
+            "x": 4,
+            "y": 6,
+            "walls_remaining": 9,
+            "is_ai": false
+        },
+        {
+            "player_id": 1,
+            "x": 3,
+            "y": 6,
+            "walls_remaining": 7,
+            "is_ai": true
+        }
+    ],
+    "horizontal_walls": [
+        [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+        ],
+        [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+        ],
+        [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+        ],
+        [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+        ],
+        [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+        ],
+        [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+        ],
+        [
+            false,
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false
+        ],
+        [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+        ]
+    ],
+    "vertical_walls": [
+        [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+        ],
+        [
+            false,
+            false,
+            false,
+            true,
+            false,
+            false,
+            false,
+            false
+        ],
+        [
+            false,
+            false,
+            false,
+            false,
+            false,
+            true,
+            false,
+            false
+        ],
+        [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+        ],
+        [
+            false,
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false
+        ],
+        [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+        ],
+        [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+        ],
+        [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+        ]
+    ],
+    "move_history": [
+        {
+            "type": "wall",
+            "player_id": 0,
+            "old_x": null,
+            "old_y": null,
+            "new_x": null,
+            "new_y": null,
+            "wall_x": 5,
+            "wall_y": 2,
+            "is_horizontal": false
+        },
+        {
+            "type": "pawn",
+            "player_id": 1,
+            "old_x": 4,
+            "old_y": 8,
+            "new_x": 4,
+            "new_y": 7,
+            "wall_x": null,
+            "wall_y": null,
+            "is_horizontal": null
+        },
+        {
+            "type": "pawn",
+            "player_id": 0,
+            "old_x": 4,
+            "old_y": 0,
+            "new_x": 4,
+            "new_y": 1,
+            "wall_x": null,
+            "wall_y": null,
+            "is_horizontal": null
+        },
+        {
+            "type": "wall",
+            "player_id": 1,
+            "old_x": null,
+            "old_y": null,
+            "new_x": null,
+            "new_y": null,
+            "wall_x": 2,
+            "wall_y": 4,
+            "is_horizontal": false
+        },
+        {
+            "type": "pawn",
+            "player_id": 0,
+            "old_x": 4,
+            "old_y": 1,
+            "new_x": 4,
+            "new_y": 2,
+            "wall_x": null,
+            "wall_y": null,
+            "is_horizontal": null
+        },
+        {
+            "type": "wall",
+            "player_id": 1,
+            "old_x": null,
+            "old_y": null,
+            "new_x": null,
+            "new_y": null,
+            "wall_x": 2,
+            "wall_y": 6,
+            "is_horizontal": true
+        },
+        {
+            "type": "pawn",
+            "player_id": 0,
+            "old_x": 4,
+            "old_y": 2,
+            "new_x": 4,
+            "new_y": 3,
+            "wall_x": null,
+            "wall_y": null,
+            "is_horizontal": null
+        },
+        {
+            "type": "pawn",
+            "player_id": 1,
+            "old_x": 4,
+            "old_y": 7,
+            "new_x": 5,
+            "new_y": 7,
+            "wall_x": null,
+            "wall_y": null,
+            "is_horizontal": null
+        },
+        {
+            "type": "pawn",
+            "player_id": 0,
+            "old_x": 4,
+            "old_y": 3,
+            "new_x": 4,
+            "new_y": 4,
+            "wall_x": null,
+            "wall_y": null,
+            "is_horizontal": null
+        },
+        {
+            "type": "wall",
+            "player_id": 1,
+            "old_x": null,
+            "old_y": null,
+            "new_x": null,
+            "new_y": null,
+            "wall_x": 3,
+            "wall_y": 1,
+            "is_horizontal": false
+        },
+        {
+            "type": "pawn",
+            "player_id": 0,
+            "old_x": 4,
+            "old_y": 4,
+            "new_x": 4,
+            "new_y": 5,
+            "wall_x": null,
+            "wall_y": null,
+            "is_horizontal": null
+        },
+        {
+            "type": "pawn",
+            "player_id": 1,
+            "old_x": 5,
+            "old_y": 7,
+            "new_x": 5,
+            "new_y": 6,
+            "wall_x": null,
+            "wall_y": null,
+            "is_horizontal": null
+        },
+        {
+            "type": "pawn",
+            "player_id": 0,
+            "old_x": 4,
+            "old_y": 5,
+            "new_x": 4,
+            "new_y": 6,
+            "wall_x": null,
+            "wall_y": null,
+            "is_horizontal": null
+        },
+        {
+            "type": "pawn",
+            "player_id": 1,
+            "old_x": 5,
+            "old_y": 6,
+            "new_x": 3,
+            "new_y": 6,
+            "wall_x": null,
+            "wall_y": null,
+            "is_horizontal": null
+        }
+    ]
+}
