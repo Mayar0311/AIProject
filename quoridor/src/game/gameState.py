@@ -143,7 +143,7 @@ class GameState:
         # Check for valid paths for both players
         valid = True
         for p in self.players:
-            if not has_valid_path(self.board, p.x, p.y, p.goal_row):
+            if not has_valid_path(self.board, p.x, p.y, p.goals):
                 valid = False
                 break
         
@@ -270,8 +270,8 @@ class GameState:
         last_move = self.move_history.pop()
         self.redo_stack.append(last_move)
 
-        # Switch turn back
-        self.switch_turn()
+        # Switch turn back (without clearing redo stack)
+        self.current_player_idx = 1 - self.current_player_idx
         
         if last_move.type == MoveType.PAWN:
             player = self.players[last_move.player_id]
@@ -279,7 +279,7 @@ class GameState:
         else:  
             self.board.remove_wall(last_move.wall_x, last_move.wall_y, last_move.is_horizontal)
             player = self.players[last_move.player_id]
-            player.return_wall()
+            player.undo_place_wall()
         
         # Clear winner if set
         self.winner = None
@@ -295,6 +295,9 @@ class GameState:
         move = self.redo_stack.pop()
         self.move_history.append(move)
         
+        # Switch turn to the player who made the move (without clearing redo stack)
+        self.current_player_idx = 1 - self.current_player_idx
+        
         if move.type == MoveType.PAWN:
             player = self.players[move.player_id]
             player.move(move.new_x, move.new_y)
@@ -303,13 +306,11 @@ class GameState:
             if player.has_won():
                 self.winner = player.player_id
                 self.message = f"Player {player.player_id + 1} wins!"
+                return True
         else:  
             self.board.place_wall(move.wall_x, move.wall_y, move.is_horizontal)
             player = self.players[move.player_id]
             player.place_wall()
-        
-        # Switch turn
-        self.switch_turn()
         
         if self.winner is None:
             self.message = f"Player {self.current_player_idx + 1}'s turn"
