@@ -101,6 +101,6 @@ From the main menu, select:
 
 ## Demo
 
-> _Add link to demo video/gameplay recording here_
+> https://drive.google.com/drive/folders/1sfLYaLLkk7Chp4FHlZUIdbgsmYvVHZws
 
 **Enjoy playing Quoridor!**
