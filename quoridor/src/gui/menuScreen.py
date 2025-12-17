@@ -40,7 +40,7 @@ class MenuScreen:
         
         # Create buttons with dynamic width based on text
         button_texts = [
-            ("Human vs Human", "human_vs_human", None),
+            ("2 Players", "human_vs_human", None),
             ("Human vs AI (Easy)", "human_vs_ai", "easy"),
             ("Human vs AI (Medium)", "human_vs_ai", "medium"),
             ("Human vs AI (Hard)", "human_vs_ai", "hard")
